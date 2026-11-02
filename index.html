@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عقارات مؤكدة التوفر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">◆ <span id="brand">دار الوساطة</span></a><nav><a href="#list">العقارات</a><a href="#req">اطلب عقاراً</a><a href="#contact">تواصل معنا</a><a href="/login.html" class="gold-link">دخول المكتب</a></nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap">
+  <h1>لا نعرض إلا ما هو <em>متاح فعلاً</em></h1>
+  <p>أكثر ما يزعج الباحث عن عقار أن يتصل على إعلان فيجده مباعاً. في دار الوساطة كل عقار يُعاد تأكيد توفره من الوسيط كل 7 أيام، وإلا اختفى تلقائياً.</p>
+  <div class="trust"><span>✓ توفر مؤكد بتاريخ</span><span>✓ تطابق تلقائي مع طلبك</span><span>✓ متابعة حتى الإغلاق</span></div>
+</div></div>
+<div class="wrap">
+  <div class="search">
+    <div><label class="f" for="ft">نوع العقار</label><select id="ft"><option value="">الكل</option><option>شقة</option><option>فيلا</option><option>أرض</option><option>تجاري</option></select></div>
+    <div><label class="f" for="fc">المدينة</label><select id="fc"><option value="">الكل</option><option>الرياض</option><option>جدة</option><option>الدمام</option></select></div>
+    <div><label class="f" for="fp">الميزانية القصوى</label><select id="fp"><option value="0">أي سعر</option><option value="500000">حتى 500 ألف</option><option value="1000000">حتى مليون</option><option value="2000000">حتى 2 مليون</option><option value="5000000">حتى 5 ملايين</option></select></div>
+    <div><label class="f" for="fs">الترتيب</label><select id="fs"><option value="n">الأحدث تأكيداً</option><option value="l">الأقل سعراً</option><option value="h">الأعلى سعراً</option></select></div>
+    <button class="btn" id="fgo" style="align-self:end">بحث</button>
+  </div>
+
+  <section id="list">
+    <div class="sec-h"><h2>عقارات مؤكدة التوفر</h2></div>
+    <div class="note" id="hidden"></div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="req"><div class="panel">
+    <div class="sec-h"><h2>لم تجد ما يناسبك؟</h2><p>سجّل طلبك وسنطابقه تلقائياً مع أي عقار جديد يُؤكَّد توفره، ويتواصل معك الوسيط.</p></div>
+    <div class="grid2">
+      <div><label class="f" for="rn">الاسم</label><input id="rn" autocomplete="name"></div>
+      <div><label class="f" for="rp">الجوال</label><input id="rp" inputmode="tel" dir="ltr" style="text-align:right" autocomplete="tel"></div>
+      <div><label class="f" for="rt">النوع</label><select id="rt"><option>شقة</option><option>فيلا</option><option>أرض</option><option>تجاري</option></select></div>
+      <div><label class="f" for="rc">المدينة</label><input id="rc" list="cities" maxlength="40" placeholder="مثال: الرياض"><datalist id="cities"></datalist></div>
+      <div class="full"><label class="f" for="rm">الميزانية القصوى (ر.س)</label><input id="rm" inputmode="numeric" placeholder="مثال: 1500000"></div>
+    </div>
+    <p><button class="btn" id="rgo">أرسل طلبي</button></p>
+  </div></section>
+  <section id="contact"><div class="panel" style="text-align:center">
+    <h2 style="font-size:32px">تواصل معنا مباشرة</h2>
+    <p id="cAddr" style="color:var(--muted);margin:6px 0 16px"></p>
+    <div class="acts" style="justify-content:center" id="cBtns"></div>
+  </div></section>
+</div></main>
+<footer><span id="fBrand">دار الوساطة</span> · جميع الحقوق محفوظة</footer>
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" hidden aria-label="واتساب"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.200 14.200c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.200-.7-2.700-1.100-4.400-3.800-4.500-4-.1-.2-1.100-1.400-1.100-2.700s.7-1.900.9-2.200c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600-.4.400c-.1.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.200 1 2.200 1.300 2.500 1.500.3.100.5.100.7-.1l.9-1.100c.2-.3.400-.2.700-.1l1.800.9c.3.100.5.200.5.300.1.100.1.600-.1 1.300z"/></svg></a>
+
+<dialog id="dd" style="width:min(640px,94vw)"><div id="ddBody"></div></dialog>
+<dialog id="dlg"><h3 id="dT" style="font-size:24px"></h3><p style="color:var(--muted);margin:4px 0 14px">سيتصل بك الوسيط لتأكيد الموعد.</p>
+  <label class="f" for="in">الاسم</label><input id="in" autocomplete="name"><label class="f" for="ip" style="margin-top:10px">الجوال</label><input id="ip" inputmode="tel" dir="ltr" style="text-align:right" autocomplete="tel">
+  <p class="acts"><button class="btn" id="igo">إرسال الاستفسار</button><button class="btn ghost" id="icl">إغلاق</button></p></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
