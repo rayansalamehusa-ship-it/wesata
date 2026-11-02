@@ -1,0 +1,9 @@
+{
+  "name": "dar-alwasata",
+  "version": "1.0.0",
+  "private": true,
+  "description": "موقع ونظام مكتب وساطة عقارية",
+  "main": "server.js",
+  "scripts": { "start": "node --no-warnings server.js", "demo": "SEED_DEMO=1 node --no-warnings server.js" },
+  "engines": { "node": ">=22.5" }
+}
